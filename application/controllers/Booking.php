@@ -71,8 +71,7 @@ class Booking extends CI_Controller
         //cek jika masih ada booking buku yang belum diambil
         $databooking = $this->db->query("select*from booking where id_user='$userid'")->num_rows();
         if ($databooking > 0) {
-            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Masih Ada booking buku sebelumnya yang belum diambil.<br> A
-            bmil Buku yang dibooking atau tunggu 1x24 Jam untuk bisa booking kembali </div>')
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Masih Ada booking buku sebelumnya yang belum diambil.<br> Ambil Buku yang dibooking atau tunggu 1x24 Jam untuk bisa booking kembali </div>')
             ;
 
             redirect(base_url());
@@ -166,8 +165,8 @@ class Booking extends CI_Controller
         //Convert to PDF
         $this->dompdf->load_html($html);
         $this->dompdf->render();
-        $this->dompdf->stream("bukti-booking-
-        $id_user.pdf", array('Attachment' => 0));
+        ob_end_clean();
+        $this->dompdf->stream("bukti-booking-$id_user.pdf", array('Attachment' => 0));
         // nama file pdf yang di hasilkan
     }
 }

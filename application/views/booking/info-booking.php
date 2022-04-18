@@ -15,7 +15,7 @@
             <tr>
                 <td>
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped tablehover" id="table-datatable">
+                        <table class="table table-bordered table-striped table-hover" id="table-datatable">
                             <tr>
                                 <th>No.</th>
                                 <th>Buku</th>
@@ -49,7 +49,8 @@
             </tr>
             <tr>
                 <td>
-                    <a class="btn btn-sm btn-outline-danger" onclick="information('Waktu Pengambilan Buku 1x24 jam dari Booking!!!')"href="<?php echo base_url() . 'booking/exportToPdf/' . $this->session->userdata('id_user'); ?>"><span class="far fa-lg fa-fw fa-filepdf"></span> Pdf</a>
+                    <a class="btn btn-sm btn-outline-danger" onclick="information('Waktu Pengambilan Buku 1x24 jam dari Booking!!!')"href="<?php echo base_url() . 'booking/exportToPdf/' . $this->session->userdata('id_user'); ?>">
+                        <span class="far fa-lg fa-fw fa-file-pdf"></span> Pdf</a>
                 </td>
             </tr>
         </table>
