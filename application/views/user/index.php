@@ -1,31 +1,24 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
- 
-    <div class="row">
-        <div class="col-lg-6 justify-content-x">
-            <?= $this->session->flashdata('pesan'); ?>
-        </div>
-    </div>
-    <div class="card mb-3" style=" max-width: 540px;">
-        <div class="row no-gutters">
-            <div class="col-md-4">
-                <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="card-img" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title"><?= $user['nama']; ?></h5>
-                    <p class="card-text"><?= $user['email']; ?></p>
-                    <p class="card-text"><small class="text-muted">Jadi member sejak: <br><b><?= date('d F Y', $user['tanggal_input']); ?></b></small></p>
-                </div>
-                <div class="btn btn-info ml-3 my-3">
-                    <a href="<?= base_url('user/ubahprofil'); ?>" class="text text-white"><i class="fas fa-user-edit"></i> Ubah 
-                    Profil</a>
-                </div>
+    <!-- row ux-->
+    <div class="">
+        <h3 class="text-dark"><p><strong>Selamat Datang di Website Layanan Masyarakat Desa</storng></p></h3>
+    </div>  
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 col-md-6">Tujuan Website ini yaitu:
+                <li>Mempermudah Masyarakat desa dalam mengakses layanan pemerintah</li>
+                <li>Mempermudah masyarakat desa mengurus </li>
+                <li>Memajukan desa menggunakan teknologiUntuk memperkenalkan Dunia Internet melalui Website</li>
+                <li>Membantu Masyrakat dalam memahami dunia Internet</li>
+            </div>      
+            <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">Manfaat Website ini yaitu:
+                <li>Masyarakat Desa mendapatkan layanan pemerintah tanpa harus datang kantor pemerintah setempat</li>
+                <li>Masyarakat Desa mendapatkan edukasi mengenia Dunia Internet</li>
             </div>
         </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-5 col-lg-6"></div>
+            <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0"></div>
+        </div>
     </div>
-</div>
-
-<!-- /.container-fluid -->
-</div>
-<!-- End of Main Content -->
